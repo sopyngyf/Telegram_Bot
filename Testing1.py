@@ -4,7 +4,7 @@
 import telegram
 import logging
 
-from telegram.ext import Updater, CommandHandler, MEssage Handler, Filters
+from telegram.ext import Updater, CommandHandler, Message Handler, Filters
 
 # token value refers to the API token of your bot
 bot = telegram.Bot(token='1047383488:AAHJVUq0okWEBoPktfnR68bkE96mRcrTysA')
