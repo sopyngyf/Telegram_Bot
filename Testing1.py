@@ -22,3 +22,5 @@ def start(update, context):
 	context.bot.send_message(chat_id=update.effective_chat.id, text="I am a bot that tries my best to answer your queries")
 start_handler = CommandHandler('start', start) 
 dispatcher.add_handler(start_handler)
+
+#xxxx
