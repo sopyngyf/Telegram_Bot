@@ -1,6 +1,5 @@
-# This is the draft written using Sublime Text, same as the one found in the
-# Jupyter Notebook This is my first try, still very new to using Python and
-# building bots
+# This is the draft written using Sublime Text, same as the one found in the Jupyter Notebook 
+# This is my first try, still very new to using Python and building bots
 
 import telegram
 import logging
