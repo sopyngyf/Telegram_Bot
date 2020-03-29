@@ -16,7 +16,7 @@ updater = Updater(token='1047383488:AAHJVUq0okWEBoPktfnR68bkE96mRcrTysA', use_co
 dispatcher = updater.dispatcher
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-# List of Commands for the Bot 
+# List of Commands for the Bot when you type /cmd to the bot
 def start(update, context):
 context.bot.send_message(chat_id=update.effective_chat.id, text="I am a bot that tries my best to answer your queries")
 start_handler = CommandHandler('start', start) dispatcher.add_handler(start_handler)
