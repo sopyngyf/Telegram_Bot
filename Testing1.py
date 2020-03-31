@@ -44,7 +44,7 @@ dispatcher.add_handler(mc_handler)
 
 def dutyphone(update, context):
 	context.bot.send_message(chat_id=update.effective_chat.id,
-		text="Contact the Duty phone at 9299 2462")
+		text="Training Command Duty Phone number is 9299 2462")
 dutyphone_handler = CommandHandler('dutyphone', dutyphone)
 dispatcher.add_handler(dutyphone_handler)
 
@@ -52,6 +52,6 @@ dispatcher.add_handler(dutyphone_handler)
 updater.start_polling()
 
 #Stop Bot
-updater.stop()
+# updater.stop()
 
 #End of Code
