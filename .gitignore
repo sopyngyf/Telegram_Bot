@@ -1,2 +1,5 @@
 # Ignore the config file
 config.py
+
+# Ignore Mac system files
+.DS_store
