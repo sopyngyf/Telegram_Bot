@@ -3,10 +3,11 @@
 
 import telegram
 import logging
+import threading
 
 import config
 
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, InlineQueryHandler
 
 # token value refers to the API token of your bot
 bot = telegram.Bot(config.access_token)
@@ -25,6 +26,16 @@ def start(update, context):
 		text="I am a bot that tries my best to answer your queries")
 start_handler = CommandHandler('start', start) 
 dispatcher.add_handler(start_handler)
+
+def shutdown():
+	updater.stop()
+	updater.is_idle = False
+
+def stop(update, context):
+	context.bot.send_message(chat_id=update.effective_chat.id,
+		text="Bot is done for today")
+stop_handler = CommandHandler('stop', stop)
+dispatcher.add_handler(stop_handler)
 
 def how(update, context):
 	context.bot.send_message(chat_id=update.effective_chat.id,
@@ -51,9 +62,9 @@ dutyphone_handler = CommandHandler('dutyphone', dutyphone)
 dispatcher.add_handler(dutyphone_handler)
 
 #Start Bot
-updater.start_polling()
+#updater.start_polling()
 
 #Stop Bot
-#updater.stop()
+updater.stop()
 
 #End of Code
