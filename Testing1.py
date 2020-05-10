@@ -65,6 +65,7 @@ dispatcher.add_handler(dutyphone_handler)
 #updater.start_polling()
 
 #Stop Bot
+updater.idle()
 updater.stop()
 
 #End of Code
